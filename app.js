@@ -3,19 +3,31 @@ const btn=document.querySelector('form');
 
 loadEventListener();
 function loadEventListener(){
-    btn.addEventListener('submit',submits)
+    btn.addEventListener('submit',submitsf)
 };
 
-function submits(event){
+function submitsf(event){
     event.preventDefault();
     const nameValue=btn.querySelector('[name="names"]').value;
-    const passValue=btn.querySelector('[name="passw"]').value;
-    if( nameValue == 'kianoosh'&& passValue == 'parsa'){
-       redirect()
+    
+    if( nameValue == 'parsa@gmail.com'){
+       submitss()
     }else{
-    alert('نام و نام خانوادگی اشتباه است')
+    document.getElementById("erorr").innerText="نام کاربری باید فرمت ایمیل داشته باشد"
     };
 };
+function submitss(even){
+    even.preventDefault()
+    const passLeng=btn.querySelector('[name="passw"]').length;
+    const passValue=btn.querySelector('[name="passw"]').value;
+    if(passLeng>=8){
+        sessionStorage.setItem(nameValue,passValue);
+        redirect()
+    }else{
+        document.getElementById("eror").innerText="پسورد باید حداقل 8 کارکتر داشته باشد";
+    };
+};
+
 function redirect(){
     window.location.href='./sec.html'
   
