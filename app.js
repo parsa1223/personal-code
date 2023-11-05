@@ -13,7 +13,7 @@ function submitsf(event){
     if( nameValue == 'parsa@gmail.com'){
        submitss()
     }else{
-    document.getElementById("erorr").innerText="نام کاربری باید فرمت ایمیل داشته باشد"
+   const errorr= document.getElementById('err').innerHTML="نام کاربری باید فرمت ایمیل داشته باشد"
     };
 };
 function submitss(even){
@@ -24,7 +24,8 @@ function submitss(even){
         sessionStorage.setItem(nameValue,passValue);
         redirect()
     }else{
-        document.getElementById("eror").innerText="پسورد باید حداقل 8 کارکتر داشته باشد";
+      const irrre=  document.getElementById('err');
+      irrre.innerHTML="پسورد باید حداقل 8 کارکتر داشته باشد";
     };
 };
 
