@@ -12,21 +12,23 @@ function submitsf(event){
     
     if( nameValue == 'parsa@gmail.com'){
        submitss()
+   
     }else{
    const errorr= document.getElementById('err').innerHTML="نام کاربری باید فرمت ایمیل داشته باشد"
     };
 };
-function submitss(even){
-    even.preventDefault()
+function submitss(e){
+    e.preventDefault();
     const passLeng=btn.querySelector('[name="passw"]').length;
-    const passValue=btn.querySelector('[name="passw"]').value;
+    // const passValue=btn.querySelector('[name="passw"]').value;
     if(passLeng>=8){
-        sessionStorage.setItem(nameValue,passValue);
-        redirect()
+        console.log(oooooopp);
+        // redirect()
     }else{
-      const irrre=  document.getElementById('err');
-      irrre.innerHTML="پسورد باید حداقل 8 کارکتر داشته باشد";
+      const irrre=  document.getElementById('err').innerHTML="رمز عبور باید حداقل 8 کارکتر داشته باشد"
+      
     };
+    
 };
 
 function redirect(){
