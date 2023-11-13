@@ -1,5 +1,6 @@
 
 const btn=document.querySelector('form');
+const chek=document.querySelector('#loot');
 
 loadEventListener();
 function loadEventListener(){
@@ -18,21 +19,23 @@ function submitsf(event){
     };
 };
 function submitss(e){
-    e.preventDefault();
-    const passLeng=btn.querySelector('[name="passw"]').length;
-    // const passValue=btn.querySelector('[name="passw"]').value;
+    const passLeng=btn.querySelector('[name="passw"]').value.length;
+    const passValue=btn.querySelector('[name="passw"]').value;
     if(passLeng>=8){
-        console.log(oooooopp);
-        // redirect()
+        redirect()
+        sessionStorage.setItem("password",passValue);
     }else{
       const irrre=  document.getElementById('err').innerHTML="رمز عبور باید حداقل 8 کارکتر داشته باشد"
       
     };
-    
 };
 
 function redirect(){
     window.location.href='./sec.html'
   
 };
+chekbox()
+function chekbox(){
+    
+}
 
