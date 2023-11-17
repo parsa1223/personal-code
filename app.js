@@ -36,6 +36,14 @@ function redirect(){
 };
 chekbox()
 function chekbox(){
+    const yesv=chek.querySelector('[name="qus"]');
+    if(yesv.value == "true"){
+        // Store()
+        console.log('ooiipp');
+    }else {
+        const rrre=document.getElementById('toto').innerHTML="رمز عبور ذخیره نمیشود"
+    }
+        
     
 }
 
