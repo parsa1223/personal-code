@@ -1,6 +1,7 @@
 
 const btn=document.querySelector('form');
 const chek=document.querySelector('#loot');
+const sub2=document.querySelector('#subb');
 
 loadEventListener();
 function loadEventListener(){
@@ -34,16 +35,27 @@ function redirect(){
     window.location.href='./sec.html'
   
 };
-chekbox()
-function chekbox(){
+subb()
+function subb(){
+sub2.addEventListener('submit',chekbox)    
+}
+
+function chekbox(eve){
+eve.preventDefault();
     const yesv=chek.querySelector('[name="qus"]');
-    if(yesv.value == "true"){
-        // Store()
-        console.log('ooiipp');
+    if(yesv.checked ==! "true"){
+              const rrre=document.getElementById('toto').innerHTML="رمز عبور ذخیره نمیشود"
     }else {
-        const rrre=document.getElementById('toto').innerHTML="رمز عبور ذخیره نمیشود"
+        console.log('kdkdkdkkd');
+        const rrre=document.getElementById('toto').innerHTML="رمز عبور ذخیره میشود"
+        store()
     }
         
     
+};
+function store (){
+    localStorage.setItem("password",passValue);
+    
 }
+
 
