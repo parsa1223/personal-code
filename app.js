@@ -25,6 +25,7 @@ function submitss(e){
     if(passLeng>=8){
         redirect()
         sessionStorage.setItem("password",passValue);
+       const rrerrer=document.getElementById("tete").innerHTML=(passValue);
     }else{
       const irrre=  document.getElementById('err').innerHTML="رمز عبور باید حداقل 8 کارکتر داشته باشد"
       
@@ -55,7 +56,7 @@ eve.preventDefault();
 };
 function store (){
     localStorage.setItem("password",passValue);
-    
+
 }
 
 
