@@ -22,9 +22,10 @@ function submitsf(event){
 function submitss(e){
     const passLeng=btn.querySelector('[name="passw"]').value.length;
     const passValue=btn.querySelector('[name="passw"]').value;
+
     if(passLeng>=8){
+                sessionStorage.setItem("password",passValue);
         redirect()
-        sessionStorage.setItem("password",passValue);
        const rrerrer=document.getElementById("tete").innerHTML=(passValue);
     }else{
       const irrre=  document.getElementById('err').innerHTML="رمز عبور باید حداقل 8 کارکتر داشته باشد"
@@ -47,7 +48,6 @@ eve.preventDefault();
     if(yesv.checked ==! "true"){
               const rrre=document.getElementById('toto').innerHTML="رمز عبور ذخیره نمیشود"
     }else {
-        console.log('kdkdkdkkd');
         const rrre=document.getElementById('toto').innerHTML="رمز عبور ذخیره میشود"
         store()
     }
@@ -55,7 +55,8 @@ eve.preventDefault();
     
 };
 function store (){
-    localStorage.setItem("password",passValue);
+    const passValue1=btn.querySelector('.passw');
+    localStorage.setItem("password",passValue1.value);
 
 }
 
