@@ -1,9 +1,7 @@
 
-const selector=document.querySelector('form');
+const chek=document.querySelector('#loot')
 const btn=document.querySelector('form');
-function submitfunctoin(selector){
-const form =document.querySelector(selector)
-};
+
 loadEventListener();
 function loadEventListener(){
     btn.addEventListener('submit',submitsf)
@@ -11,9 +9,9 @@ function loadEventListener(){
 
 function submitsf(event){
     event.preventDefault();
-   document.addEventListener('DOMContentLoaded',function(){submitfunctoin('.passw')})
+  const nameValue=document.querySelector('[name="names"]').value;
     
-    if(    document.addEventListener('DOMContentLoaded',function(){submitfunctoin('.passw')}).value
+    if(   nameValue
     == 'parsa@gmail.com'){
        submitss()
    
@@ -39,28 +37,19 @@ function redirect(){
     window.location.href='./sec.html'
   
 };
-// subb()
-// function subb(){
-// sub2.addEventListener('submit',chekbox)    
-// }
+chekbox();
 
-// function chekbox(eve){
-// eve.preventDefault();
-//     const yesv=chek.querySelector('[name="qus"]');
-//     if(yesv.checked ==! "true"){
-//               const rrre=document.getElementById('toto').innerHTML="رمز عبور ذخیره نمیشود"
-//     }else {
-//         const rrre=document.getElementById('toto').innerHTML="رمز عبور ذخیره میشود"
-//         store()
-//     }
+function chekbox(eve){
+eve.preventDefault();
+    const yesv=chek.querySelector('[name="qus"]');
+    if(typeof(Storage) !== "undefined"){
+    if(yesv.checked ==! "true"){
+
+    }else {
+    }}
         
     
-// };
-// function store (){
-//     const passValue=btn.querySelector('[name="passw"]');
+};
 
-//     localStorage.setItem("password",passValue);
-
-// }
 
 
