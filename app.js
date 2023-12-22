@@ -29,7 +29,7 @@ function submitss(){
 
     if(passLeng>=8){
         redirect()
-        checkStorageAndSendToWelcomePage()
+        sessionStorage.setItem('islogin',1)
     }else{
       const irrre=  document.getElementById('err').innerHTML="رمز عبور باید حداقل 8 کارکتر داشته باشد"
       
@@ -37,19 +37,11 @@ function submitss(){
 };
 
 function redirect(){
-    window.location.href='./sec.html'
+    const storage =sessionStorage.getItem('islogin')
+    if (storage == 1){
+            window.location.href='./sec.html'
+
+    }else{}
   
 };
-
-function checkStorageAndSendToWelcomePage(eve){
-eve.preventDefault();
-    
-    if(typeof(Storage) !== "undefined"){
-        sessionStorage.setItem("islogin",1)
-    }else{}
-        
-    
-};
-
-
 
