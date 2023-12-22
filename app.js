@@ -28,9 +28,8 @@ function submitss(){
     const passValue=btn.querySelector('[name="passw"]').value;
 
     if(passLeng>=8){
-                sessionStorage.setItem("password",passValue);
         redirect()
-       const rrerrer=document.getElementById("tete").innerHTML=(passValue);
+        checkStorageAndSendToWelcomePage()
     }else{
       const irrre=  document.getElementById('err').innerHTML="رمز عبور باید حداقل 8 کارکتر داشته باشد"
       
