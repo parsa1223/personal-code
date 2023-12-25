@@ -25,11 +25,11 @@ submitss()
 };
 function submitss(){
     const passLeng=btn.querySelector('[name="passw"]').value.length;
-    const passValue=btn.querySelector('[name="passw"]').value;
 
     if(passLeng>=8){
         redirect()
         sessionStorage.setItem('islogin',1)
+        remeberMe()
     }else{
       const irrre=  document.getElementById('err').innerHTML="رمز عبور باید حداقل 8 کارکتر داشته باشد"
       
@@ -42,6 +42,17 @@ function redirect(){
             window.location.href='./sec.html'
 
     }else{}
-  
 };
+function beforeRemember(){
+
+}
+function remeberMe(){    const passValue=btn.querySelector('[name="passw"]').value;
+const nameValue=document.querySelector('[name="names"]').value;
+    const checkBox=document.querySelector('[name=""qus]');
+    if(checkBox.checked == 'true'){        localStorage.setItem(nameValue,passValue);
+
+    }else{      
+
+    }
+}
 
