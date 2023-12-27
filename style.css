@@ -4,8 +4,11 @@ margin-top: 100px;
 .head{
     font-size: 40px;
 }
-.login{
-    font-size: 30px;
+#err{
+    color: red;
+}
+#errr{
+    color: red;
 }
 .submit{
     border:double;
