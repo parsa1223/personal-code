@@ -3,7 +3,9 @@ const chek=document.querySelector('#loot')
 const btn=document.querySelector('form');
 const nameValue=document.querySelector('[name="names"]').value;
 const passValue2=btn.querySelector('[name="passw"]').value;
+const khoroog=document.querySelector('#logout');
 loadEventListener();
+
 function loadEventListener(){
     btn.addEventListener('submit',submitsf)
     redirect();
@@ -30,7 +32,7 @@ function submitss(){
     const passLeng=btn.querySelector('[name="passw"]').value.length;
 
     if(passLeng>=8){
-         redirect();
+         
         sessionStorage.setItem('islogin',1)
         
     }else{
@@ -38,34 +40,36 @@ function submitss(){
       
     };
 };
-
+redirect();
 
 function redirect(){
-    const storage =sessionStorage.getItem('islogin')
-    if (storage == 1){
+    const storage =sessionStorage.getItem('islogin');
+    const eternalStorage=localStorage.getItem('remember');
+    if (storage == 1|| eternalStorage==1){
             window.location.href='./sec.html'
 
     }else{}
 };
 
-// beforeRemember()
-// function beforeRemember(){
-//     const checkBox=document.querySelector('[name="qus"]').checked;
-// if(checkBox != "true"){
+
+function rememberMe(){    
+    const checkBox=document.querySelector('[name="qus"]').checked;
+    if(checkBox == true){     
+            localStorage.setItem('remember',1);
+
+    }else{      
+
+    }
+};
+beforeLogout()
+function beforeLogout(){    khoroog.addEventListener('submit',logout)};
+
+function logout(eve){
+eve.preventDefault();   
+ window.location.href='./index.html';
+
+    localStorage.removeItem("remember");  
+      sessionStorage.removeItem('islogin');
     
-// }else{
-//     console.log("uuuuuuu");
-// }
-// };
-
-// function remeberMe(){    
-//     const checkBox=document.querySelector('[name="qus"]').checked;
-//     if(checkBox == 'true'){     
-//         //    
-// console.log("nameValue");
-
-//     }else{      
-
-//     }
-// };
+};
 
