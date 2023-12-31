@@ -14,14 +14,11 @@ function loadEventListener(){
 
 function submitsf(event){
     event.preventDefault();
-//   const nameValue=document.querySelector('[name="names"]').value;
-   const email={name1:'parsa@gmail.com',
-   name2:'ahmad@gmail.com',
-   name3 :'kianoosh@gmail.com'};
+  const nameValue=document.querySelector('[name="names"]').value;
+   
   
     
-    if(   nameValue
-    ==! email.name1||email.name2||email.name3){
+    if(   nameValue == 'parsa@gmail.com' ){
 submitss()
    
     }else{          const errorr= document.getElementById('errr').innerHTML="نام کاربری باید فرمت ایمیل داشته باشد"
@@ -32,7 +29,8 @@ function submitss(){
     const passLeng=btn.querySelector('[name="passw"]').value.length;
 
     if(passLeng>=8){
-         
+         redirect();
+
         sessionStorage.setItem('islogin',1)
         
     }else{
@@ -40,13 +38,13 @@ function submitss(){
       
     };
 };
-redirect();
+redirect()
 
 function redirect(){
     const storage =sessionStorage.getItem('islogin');
-    const eternalStorage=localStorage.getItem('remember');
-    if (storage == 1|| eternalStorage==1){
-            window.location.href='./sec.html'
+    // const eternalStorage=localStorage.getItem('remember');
+    if (storage == 1){
+            window.location.href='./wellcom.html'
 
     }else{}
 };
@@ -61,15 +59,3 @@ function rememberMe(){
 
     }
 };
-beforeLogout()
-function beforeLogout(){    khoroog.addEventListener('submit',logout)};
-
-function logout(eve){
-eve.preventDefault();   
- window.location.href='./index.html';
-
-    localStorage.removeItem("remember");  
-      sessionStorage.removeItem('islogin');
-    
-};
-
