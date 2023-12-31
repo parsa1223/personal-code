@@ -8,7 +8,7 @@ loadEventListener();
 
 function loadEventListener(){
     btn.addEventListener('submit',submitsf)
-    redirect();
+    
 
 };
 
@@ -38,12 +38,12 @@ function submitss(){
       
     };
 };
-redirect()
+
 
 function redirect(){
     const storage =sessionStorage.getItem('islogin');
-    // const eternalStorage=localStorage.getItem('remember');
-    if (storage == 1){
+    const eternalStorage=localStorage.getItem('remember');
+    if (storage == 1 || eternalStorage==1){
             window.location.href='./wellcom.html'
 
     }else{}
