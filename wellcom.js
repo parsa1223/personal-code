@@ -18,7 +18,7 @@ const local= localStorage.getItem("islogin");
 if(sesion ==1 || local == 1){
 
 }else{
-
+      window.location.href='./login.html';
 };
 
 
