@@ -2,7 +2,6 @@
 const chek=document.querySelector('#loot')
 const btn=document.querySelector('form');
 const nameValue=document.querySelector('[name="names"]').value;
-const passValue2=btn.querySelector('[name="passw"]').value;
 const khoroog=document.querySelector('#logout');
 loadEventListener();
 
@@ -29,20 +28,29 @@ function submitss(){
     const passLeng=btn.querySelector('[name="passw"]').value.length;
 
     if(passLeng>=8){
-         redirect();
-
-        sessionStorage.setItem('islogin',1)
+        
+        submitsd()
         
     }else{
       const irrre=  document.getElementById('err').innerHTML="رمز عبور باید حداقل 8 کارکتر داشته باشد"
       
     };
 };
+function submitsd(){
+    const passValue=btn.querySelector('[name="passw"]').value;
+ if(passValue=="12345678"){
+     redirect();
+     rememberMe();
+sessionStorage.setItem('islogin',1)
+ }else{
+    const irrre=  document.getElementById('err').innerHTML="رمز عبور اشتباه است"
+ }
+}
 
 
 function redirect(){
     const storage =sessionStorage.getItem('islogin');
-    const eternalStorage=localStorage.getItem('remember');
+    const eternalStorage=localStorage.getItem('islogin');
     if (storage == 1 || eternalStorage==1){
             window.location.href='./wellcom.html'
 
@@ -53,7 +61,7 @@ function redirect(){
 function rememberMe(){    
     const checkBox=document.querySelector('[name="qus"]').checked;
     if(checkBox == true){     
-            localStorage.setItem('remember',1);
+            localStorage.setItem('islogin',1);
 
     }else{      
 
