@@ -34,15 +34,11 @@ function fibonacci(e){
       let n1=0 , n2=1, n3;
 
       for( i = 1;i<=fibonacciInput;i++){
-            var result=document.getElementById('underFibonache').innerHTML=(n1);
+            var result=document.getElementById('#underFibonache').innerHTML=n1.toString();
+
             n3 =n1+n2;
             n1=n2;
             n2=n3; 
       }
-
-
-
-
-
 
 }
