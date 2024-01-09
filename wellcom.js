@@ -31,12 +31,28 @@ if(sesion ==1 || local == 1){
 function fibonacci(e){
       e.preventDefault()
       const fibonacciInput=document.querySelector('#fibonache').value;
-      let n1=0 , n2=1, n3;
-for( i=1;i<=fibonacciInput;i++){
-      // document.getElementById("underFibonacci").innerHTML=n1+"<br>";
-      document.write (" <br> " +  n1);
-      n3=n1+n2;
-      n1=n2;
-      n2=n3;
-}           
+      
+      let n1=0 , n2=1, n3,n4;
+let num = new Array();
+num[0]=n1;
+num[1]=n2;
+num[2]=n1+n2;
+n3=n1+n2;
+num[3]=n2+n3;
+
+let text="<ul>";
+for(let i=0;i<fibonacciInput;i++){
+n4=n3+n2;
+      
+    n2=n3;
+    n3=n4;
+    
+
+     
+
+text+="<li>"+num[i]+"</li>";
+       
+}         
+text+="</ul>"
+document.getElementById("underFibonacci").innerHTML=text
       }
