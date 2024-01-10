@@ -32,21 +32,16 @@ function fibonacci(e){
       e.preventDefault()
       const fibonacciInput=document.querySelector('#fibonache').value;
       
-      let n1=0 , n2=1, n3,n4;
+      let n1=0 , n2=1, n3;
 let num = new Array();
-num[0]=n1;
-num[1]=n2;
-num[2]=n1+n2;
-n3=n1+n2;
-num[3]=n2+n3;
+
 
 let text="<ul>";
 for(let i=0;i<fibonacciInput;i++){
-n4=n3+n2;
-      
-    n2=n3;
-    n3=n4;
-    
+num.push(n1);
+n3=n1+n2;
+n1=n2;
+n2=n3
 
      
 
