@@ -1,10 +1,12 @@
 const khoroog=document.querySelector('#logout');
-const underFibon=document.querySelector('#fibonaccci')
+const underFibon=document.querySelector('#fibonaccci');
+const mirrored=document.querySelector("#mirrored");
 beforeLogout()
 
 function beforeLogout(){  
       khoroog.addEventListener('submit',logout)
       underFibon.addEventListener('submit',fibonacci)
+      mirrored.addEventListener('submit',mirror)
 }
       ;
 function logout(eve){
@@ -50,4 +52,12 @@ text+="<li>"+num[i]+"</li>";
 }         
 text+="</ul>"
 document.getElementById("underFibonacci").innerHTML=text
-      }
+      };
+      function mirror(e){
+e.preventDefault();
+const input=document.getElementById('mirror').value;
+const step1=input.split('');
+const step2=step1.reverse();
+const step3=step2.join('');
+const lastStep=document.getElementById('underMiror').innerHTML=step3
+      };
