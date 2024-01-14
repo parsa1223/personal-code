@@ -56,8 +56,14 @@ document.getElementById("underFibonacci").innerHTML=text
       function mirror(e){
 e.preventDefault();
 const input=document.getElementById('mirror').value;
+const inputLength=document.getElementById('mirror').value.length;
 const step1=input.split('');
-const step2=step1.reverse();
-const step3=step2.join('');
-const lastStep=document.getElementById('underMiror').innerHTML=step3
+var step2='';
+for(var i=inputLength-1;i>=0;i--){
+      step2=step2+step1[i]
+}
+
+
+
+const lastStep=document.getElementById('underMiror').innerHTML=step2;
       };
