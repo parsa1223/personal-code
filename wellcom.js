@@ -1,12 +1,14 @@
 const khoroog=document.querySelector('#logout');
 const underFibon=document.querySelector('#fibonaccci');
 const mirrored=document.querySelector("#mirrored");
+const liste=document.querySelector('#list');
 beforeLogout()
 
 function beforeLogout(){  
       khoroog.addEventListener('submit',logout)
       underFibon.addEventListener('submit',fibonacci)
       mirrored.addEventListener('submit',mirror)
+      liste.addEventListener('submit',list)
 }
       ;
 function logout(eve){
@@ -67,3 +69,24 @@ for(var i=inputLength-1;i>=0;i--){
 
 const lastStep=document.getElementById('underMiror').innerHTML=step2;
       };
+      function list(e){
+e.preventDefault();
+const input=document.getElementById('liste').value;
+const step1 =input.split('');
+for(var i=1;i<input.length;i++){
+      for(var j=0;j<i;j++){
+if(step1[i]<step1[j]){
+      var x=step1[i];
+      step1[i]=step1[j];
+      step1[j]=x;
+}
+      }
+};
+let text="<ul>";
+for(let i=0;i<input.length;i++){
+      text +="<li>"+step1[i]+"</li>";
+}
+text+='</ul>';
+const inderList=document.getElementById('underList').innerHTML=text;
+      }
+
