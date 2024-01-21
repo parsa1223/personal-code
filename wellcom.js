@@ -88,5 +88,25 @@ for(let i=0;i<input.length;i++){
 }
 text+='</ul>';
 const inderList=document.getElementById('underList').innerHTML=text;
+      };
+      function search(){
+            let input=document.getElementById("inputSearch").value;
+            const tank=document.getElementById('liste').value;
+            const tank1=tank.split('');
+            var foul=false;
+      for(i=0;i<tank1.length;i++){
+            if(tank1[i]==input){
+             foul=true;
+             }else{
+
+             };
+      };
+      if(foul){
+            var x=document.getElementById("searchResult").innerHTML=input;
+      }else{
+            var x2=document.getElementById("searchResult").innerHTML="none";
+
       }
+       
+      };
 
