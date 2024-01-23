@@ -102,7 +102,7 @@ const inderList=document.getElementById('underList').innerHTML=text;
              };
       };
       if(foul){
-            var x=document.getElementById("searchResult").innerHTML=input;
+            var x=document.getElementById("searchResult").innerHTML=tank1.indexOf(input)+1;
       }else{
             var x2=document.getElementById("searchResult").innerHTML="none";
 
