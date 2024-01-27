@@ -97,12 +97,16 @@ const inderList=document.getElementById('underList').innerHTML=text;
       for(i=0;i<tank1.length;i++){
             if(tank1[i]==input){
              foul=true;
+             var last = i;
              }else{
 
              };
       };
+      
       if(foul){
-            var x=document.getElementById("searchResult").innerHTML=tank1.indexOf(input)+1;
+            var x=document.getElementById("searchResult").innerHTML=last+1;
+          
+
       }else{
             var x2=document.getElementById("searchResult").innerHTML="none";
 
