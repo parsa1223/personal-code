@@ -114,3 +114,19 @@ const inderList=document.getElementById('underList').innerHTML=text;
        
       };
 
+function bePrime (){
+      const input =document.getElementById("prime").value;
+      var foul=false;
+      for(var i=2;i<=input/2;){
+            if(input %i == 0){
+            foul=true;
+            break;
+            }
+            ++i;
+      }
+      if (!foul){
+            var x=document.getElementById("underFibonacci").innerHTML="true"
+      }else{
+            var x2=document.getElementById("underFibonacci").innerHTML="false"
+      }
+}
