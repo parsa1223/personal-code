@@ -116,29 +116,27 @@ const inderList=document.getElementById('underList').innerHTML=text;
 
 function bePrime (){
       const input =document.getElementById("prime").value;
-      var foul;
+      var foul=true;
       if(input<=1){
             foul =false;
-      
-      };
-      if(input ==2 ||input==3 ){
-            foul=true;
+             
+      }
+       else if(input ==2 ||input==3 ){
             
-
-      };
-      if(input%2==0 ||input%3==0){
+foul =true
+      }
+      else if(input%2==0 ||input%3==0){
 foul=false;
-            
       };
-      for(var i =5;i<Math.sqrt(input);i=i+6){
+      for(var i =5;i<input;i=i+6){
             if(input %i==0||input %(i+2)==0){
-                  foul=false;
+                foul =false
                   break;
                  
             }
       }
 
-      if (foul){
+      if (foul== true){
             var x=document.getElementById("underFibonacci").innerHTML="true"
       }else{
             var x2=document.getElementById("underFibonacci").innerHTML="false"
