@@ -128,8 +128,14 @@ foul =true
       else if(input%2==0 ||input%3==0){
 foul=false;
       };
+      for(var i=7;i<input;i=i+6){
+            if( input %i ==0){
+                  foul=false
+                  break;
+            }
+      }
       for(var i =5;i<input;i=i+6){
-            if(input %i==0||input %(i+2)==0){
+            if(input %i==0){
                 foul =false
                   break;
                  
