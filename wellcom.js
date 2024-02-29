@@ -114,37 +114,23 @@ const inderList=document.getElementById('underList').innerHTML=text;
        
       };
 
-function bePrime (){
+function bePrime (n){
       const input =document.getElementById("prime").value;
-      var foul=true;
-      if(input<=1){
-            foul =false;
-             
+     var foul=true;
+     var n;
+      n=input-1;
+      if( input %n   === 0){
+           foul=false;
+           return;
       }
-       else if(input ==2 ||input==3 ){
-            
-foul =true
-      }
-      else if(input%2==0 ||input%3==0){
-foul=false;
-      };
-      for(var i=7;i<input;i=i+6){
-            if( input %i ==0){
-                  foul=false
-                  break;
-            }
-      }
-      for(var i =5;i<input;i=i+6){
-            if(input %i==0){
-                foul =false
-                  break;
-                 
-            }
-      }
+     
+      bePrime(n-1)
 
-      if (foul== true){
-            var x=document.getElementById("underFibonacci").innerHTML="true"
+     console.log(n)
+
+ if (foul){
+            var x2=document.getElementById("underFibonacci").innerHTML="true";
       }else{
-            var x2=document.getElementById("underFibonacci").innerHTML="false"
+            var x23=document.getElementById("underFibonacci").innerHTML="false";
       }
-}
+};
