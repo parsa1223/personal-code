@@ -116,15 +116,13 @@ const inderList=document.getElementById('underList').innerHTML=text;
 
 function bePrime (input,n=2){
       
-     var foul=true;
      
-     if(input<2){
+     if(input<=1){
       
       return false;
      }
      if(input ===2){
-return true;
-
+      return true;
      }
      if(input%n===0){
       return false;
@@ -133,7 +131,7 @@ return true;
       return true;
       
      }
-      bePrime(input,n+1)
+      return bePrime(input,n+1);
 
 
 
@@ -141,8 +139,8 @@ return true;
 };
 function result(){
 const input1 =document.getElementById("prime").value;
-const x=input1;
- if (bePrime(parseInt(x))){
+let x=parseInt(input1);
+ if (bePrime(x)){
             var x2=document.getElementById("underFibonacci").innerHTML="true";
       }else{
             var x23=document.getElementById("underFibonacci").innerHTML="false";
